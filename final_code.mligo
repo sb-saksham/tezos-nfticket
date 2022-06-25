@@ -1105,5 +1105,29 @@ let ticket_main (param, storage : ticket_sys_entry_points * ticket_system_storag
   | ClaimEventMoney p -> claim_eve_money(p, storage)
     
   | ClaimMemMoney p -> claim_mem_money(p, storage)
-
-//   | SellToken p -> 
+  
+// Initial Storage
+// {
+//     nft_token_storage = { 
+//         ledger = (Big_map.empty: (token_id, address) big_map);
+//         operators = (Big_map.empty: ((address * (address * token_id)), unit) big_map);
+//         reverse_ledger = (Big_map.empty: (address, token_id list) big_map);
+//         metadata = Big_map.literal [
+//         ("", Bytes.pack("tezos-storage:contents"));
+//         ("contents", ("7b2276657273696f6e223a2276312e302e30222c226e616d65223a2254555473222c22617574686f7273223a5b2240636c617564656261726465225d2c22696e7465726661636573223a5b22545a49502d303132222c22545a49502d303136225d7d": bytes))
+//         ];
+//         token_metadata = (Big_map.empty: (token_id, token_metadata) big_map);
+//         next_token_id = 0n;
+//         admin = ("tz1Me1MGhK7taay748h4gPnX2cXvbgL6xsYL": address);
+//     };
+//     ticket_storage = {
+//         id_to_tickets = (Big_map.empty: (token_id, ticket) big_map);
+//         event_to_tickets = (Big_map.empty: (event_id, token_id_set) big_map);
+//         id_to_mem = (Big_map.empty: (token_id, membership_pass) big_map);
+//         mem_to_mem_pass = (Big_map.empty: (mem_id, token_id_set) big_map);
+//         memberships = (Big_map.empty: (mem_id, membership) big_map);
+//         events = (Big_map.empty: (event_id, event) big_map);
+//         next_event_id: 0n;
+//         next_mem_id: 0n;
+//     };
+// }
